@@ -44,6 +44,7 @@ import dansplugins.factionsystem.commands.JoinCommand;
 import dansplugins.factionsystem.commands.KickCommand;
 import dansplugins.factionsystem.commands.LawsCommand;
 import dansplugins.factionsystem.commands.LeaveCommand;
+import dansplugins.factionsystem.commands.LineClaimCommand;
 import dansplugins.factionsystem.commands.ListCommand;
 import dansplugins.factionsystem.commands.LockCommand;
 import dansplugins.factionsystem.commands.MakePeaceCommand;
