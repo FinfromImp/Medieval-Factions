@@ -186,7 +186,7 @@ public class DamageHandler implements Listener {
             return false;
         }
         Duel duel = EphemeralData.getInstance().getDuel(attacker, victim);
-        return duel != null && duel.getStatus() == DuelState.DUELLING;
+        return duel != null && isDuelActive(duel);
     }
 
     private boolean wasPlayerWasDamagedByAProjectile(EntityDamageByEntityEvent event) {
