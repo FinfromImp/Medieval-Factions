@@ -25,6 +25,7 @@ import dansplugins.factionsystem.eventhandlers.helper.RelationChecker;
 import dansplugins.factionsystem.objects.domain.ClaimedChunk;
 import dansplugins.factionsystem.objects.domain.Duel;
 import dansplugins.factionsystem.objects.domain.Faction;
+import dansplugins.factionsystem.objects.domain.Duel.DuelState;
 import dansplugins.factionsystem.utils.Locale;
 import dansplugins.factionsystem.utils.Logger;
 
@@ -185,7 +186,7 @@ public class DamageHandler implements Listener {
             return false;
         }
         Duel duel = EphemeralData.getInstance().getDuel(attacker, victim);
-        return duel != null;
+        return duel != null && duel.getStatus() == DuelState.DUELLING;
     }
 
     private boolean wasPlayerWasDamagedByAProjectile(EntityDamageByEntityEvent event) {
